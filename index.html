@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+	<script src="./main.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quasarzone profile generator</title>
+	<link href="./style.css" rel="stylesheet" type="text/css">
+	<noscript>
+		<b style="color: #ffffff;">자바스크립트를 활성화해 주세요</b>
+		<div class="area" content style="display: none;"></body>
+	</noscript>
+</head>
+
+<body style="background: #171717;" onload="drwimg()">
+	<div class="area">
+		<div class="content"><img src="./logo.png" width="50" height="50"></div>
+		<div class="content">
+			<input type="button" id="prevbtn" value="Prev" onClick="prev()">
+			<input type="text" name="inputarea" placeholder="CPU" onkeypress="enter()">
+			<input type="button" id="nextbtn" value="Next" onClick="next()">
+		</div>
+		<div class="imgcontent" id="imgins">
+			<label for="img" id="imgbtn">Add img</label>
+			<input type="file" id="img" onchange="imgadd()"><br><br>
+			<img src="" width="200" id="previewlayer" onload="drwimg()">
+		</div>
+		<div class="content">
+			<label for="tmp">Template:</label>
+			<select name="tmp" id="tmp">
+				<option value="1">1번</option>
+			</select>
+			<canvas id="canvas" width="734" height="235"></canvas>
+		</div>
+	</div>
+</body>
+
+</html>
